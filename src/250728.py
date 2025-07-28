@@ -55,7 +55,7 @@ def draw_transparent_cloud(img, x, y, alpha=0.4):
     cv2.addWeighted(overlay, alpha, img, 1 - alpha, 0, img)
 
 # 이미지 불러오기 및 리사이즈
-img = cv2.imread('../image/test.jpg')
+img = cv2.imread('../image/like_lenna.png')
 img = cv2.resize(img, (720, 872))
 
 # 구름 위치
@@ -66,7 +66,7 @@ for pos in cloud_positions:
 # 무지개 그리기
 draw_rainbow(
     base_img=img,
-    center=(300, 700),  # 무지개 중심
+    center=(300, 400),  # 무지개 중심
     radius=500,
     thickness=12,
     alpha=0.5
